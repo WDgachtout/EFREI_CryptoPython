@@ -23,6 +23,10 @@ def Exo2():
 def ExoX():
     return render_template('exerciceX.html')
 
+@app.route('/actualité')
+def Exo1():
+    return render_template('actualité.html')
+    
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
     valeur_bytes = valeur.encode()  # Conversion str -> bytes
