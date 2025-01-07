@@ -9,7 +9,15 @@ f = Fernet(key)
 
 @app.route('/exercice1')
 def hello_world():
-    return f"Bienvenue sur mon site html 1"
+    return render_template(exercice1.html)
+    
+@app.route('/exercice2')
+def hello_world():
+    return render_template(exercice2.html)
+
+@app.route('/exerciceX')
+def hello_world():
+    return render_template(exerciceX.html)
 
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
