@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Exercice 2</title>
     <style>
         table {
             border-collapse: collapse;
-            width: 50%;
+            width: 60%;
             margin-bottom: 20px;
         }
         table, th, td {
@@ -23,15 +24,20 @@
 <body>
     <h1>Exercice 2</h1>
 
+    <!-- Première partie : Tableau à 6 cases -->
     <h2>Voici la première partie :</h2>
     <table>
         <tr>
             <td>un tableau</td>
+            <td colspan="4"></td>
             <td>à 6</td>
-            <td>cases</td>
+        </tr>
+        <tr>
+            <td colspan="6">cases</td>
         </tr>
     </table>
 
+    <!-- Deuxième partie : Liste -->
     <h2>Voici la deuxième partie :</h2>
     <div class="list-section">
         <p><b>Une liste</b></p>
@@ -52,24 +58,25 @@
         </ol>
     </div>
 
+    <!-- Troisième partie : Un autre tableau -->
     <h2>Voici la troisième partie :</h2>
     <table>
         <tr>
             <td>un autre tableau</td>
             <td></td>
             <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
             <td></td>
         </tr>
         <tr>
             <td></td>
+            <td colspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
             <td></td>
             <td></td>
         </tr>
     </table>
 </body>
 </html>
-
