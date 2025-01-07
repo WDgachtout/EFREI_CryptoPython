@@ -13,15 +13,15 @@ def Hello_World():
 
 @app.route('/exercice1')
 def Exo1():
-    return render_template(exercice1.html)
+    return render_template('exercice1.html')
     
 @app.route('/exercice2')
 def Exo2():
-    return render_template(exercice2.html)
+    return render_template('exercice2.html')
 
 @app.route('/exerciceX')
 def ExoX():
-    return render_template(exerciceX.html)
+    return render_template('exerciceX.html')
 
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
