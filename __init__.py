@@ -7,9 +7,17 @@ app = Flask(__name__)
 key = Fernet.generate_key()
 f = Fernet(key)
 
-@app.route('/')
+@app.route('/exercice1.html')
 def hello_world():
-    return "Bienvenue sur l'application de chiffrement et déchiffrement !"
+    return "Bienvenue sur mon site html 1"
+
+@app.route('/exercice2.html')
+def hello_world():
+    return "Bienvenue sur mon site html 2"
+
+@app.route('/exerciceX.html')
+def hello_world():
+    return "Bienvenue sur mon site html X"
 
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
