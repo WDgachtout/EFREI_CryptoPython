@@ -8,15 +8,15 @@ key = Fernet.generate_key()
 f = Fernet(key)
 
 @app.route('/exercice1')
-def hello_world():
+def Exo1():
     return render_template(exercice1.html)
     
 @app.route('/exercice2')
-def hello_world():
+def Exo2():
     return render_template(exercice2.html)
 
 @app.route('/exerciceX')
-def hello_world():
+def ExoX():
     return render_template(exerciceX.html)
 
 @app.route('/encrypt/<string:valeur>')
