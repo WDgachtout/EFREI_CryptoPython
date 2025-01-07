@@ -7,15 +7,15 @@ app = Flask(__name__)
 key = Fernet.generate_key()
 f = Fernet(key)
 
-@app.route('/exercice1.html')
+@app.route('/exercice1')
 def hello_world():
     return "Bienvenue sur mon site html 1"
 
-@app.route('/exercice2.html')
+@app.route('/exercice2')
 def hello_world():
     return "Bienvenue sur mon site html 2"
 
-@app.route('/exerciceX.html')
+@app.route('/exerciceX')
 def hello_world():
     return "Bienvenue sur mon site html X"
 
