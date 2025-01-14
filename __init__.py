@@ -13,7 +13,7 @@ def Hello_World():
     
 @app.route('/svg')
 def svg():
-    return render_template('Exemple_Base_SVG')
+    return render_template('svg')
 
 @app.route('/exercice1')
 def Exo1():
