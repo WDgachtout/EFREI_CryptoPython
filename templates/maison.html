@@ -4,50 +4,33 @@
     <title>Maison en HTML</title>
 </head>
 <body>
-    <!-- Soleil -->
-    <div align="center">
-        ☀️
-    </div>
+    <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+        <!-- Soleil -->
+        <circle cx="250" cy="50" r="30" fill="yellow" />
 
-    <!-- Nuages -->
-    <div align="center">
-        ☁️&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☁️
-    </div>
+        <!-- Nuages -->
+        <ellipse cx="60" cy="50" rx="40" ry="20" fill="lightgray" />
+        <ellipse cx="100" cy="50" rx="40" ry="20" fill="lightgray" />
 
-    <!-- Toit de la maison -->
-    <table align="center">
-        <tr>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td style="font-size: 30px;">/\\</td>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;&nbsp;</td>
-            <td style="font-size: 30px;">/  \\</td>
-            <td>&nbsp;&nbsp;</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td style="font-size: 30px;">/____\\</td>
-            <td></td>
-        </tr>
-    </table>
+        <!-- Toit de la maison -->
+        <polygon points="100,100 200,100 150,50" fill="red" />
 
-    <!-- Corps de la maison -->
-    <table align="center" border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse;">
-        <tr>
-            <td colspan="3" style="height: 50px; text-align: center;">🔲</td>
-        </tr>
-        <tr>
-            <td style="width: 50px; height: 50px;">🪟</td>
-            <td style="width: 50px; height: 50px;">🏠</td>
-            <td style="width: 50px; height: 50px;">🌸</td>
-        </tr>
-    </table>
+        <!-- Corps de la maison -->
+        <rect x="100" y="100" width="100" height="100" fill="orange" />
 
-    <!-- Jardin -->
-    <div align="center">
-        🌼🌳🌻
-    </div>
+        <!-- Porte -->
+        <rect x="135" y="150" width="30" height="50" fill="brown" />
+
+        <!-- Fenêtre -->
+        <rect x="110" y="110" width="30" height="30" fill="lightblue" />
+        <line x1="110" y1="125" x2="140" y2="125" stroke="white" stroke-width="2" />
+        <line x1="125" y1="110" x2="125" y2="140" stroke="white" stroke-width="2" />
+
+        <!-- Fleurs -->
+        <circle cx="90" cy="210" r="10" fill="red" />
+        <circle cx="210" cy="210" r="10" fill="yellow" />
+        <rect x="88" y="215" width="4" height="10" fill="green" />
+        <rect x="208" y="215" width="4" height="10" fill="green" />
+    </svg>
 </body>
 </html>
