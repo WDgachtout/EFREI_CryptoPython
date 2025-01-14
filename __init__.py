@@ -38,6 +38,10 @@ def maison():
 @app.route('/jack')
 def jack():
     return render_template('jack.html')
+
+@app.route('/chenille')
+def chenille():
+    return render_template('chenille.html')
     
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
