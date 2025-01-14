@@ -34,6 +34,10 @@ def svg():
 @app.route('/maison')
 def maison():
     return render_template('maison.html')
+
+@app.route('/jack')
+def jack():
+    return render_template('jack.html')
     
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
