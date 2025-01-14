@@ -10,6 +10,10 @@ f = Fernet(key)
 @app.route('/')
 def Hello_World():
     return f"Hello world !"
+    
+@app.route('/svg')
+def svg():
+    return render_template('Exemple_Base_SVG')
 
 @app.route('/exercice1')
 def Exo1():
