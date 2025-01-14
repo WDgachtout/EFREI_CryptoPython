@@ -11,10 +11,6 @@ f = Fernet(key)
 def Hello_World():
     return f"Hello world !"
     
-@app.route('/svg')
-def svg():
-    return render_template('svg')
-
 @app.route('/exercice1')
 def Exo1():
     return render_template('exercice1.html')
@@ -30,6 +26,10 @@ def ExoX():
 @app.route('/actualite')
 def Actu():
     return render_template('actualite.html')
+
+@app.route('/svg')
+def svg():
+    return render_template('svg.html')
     
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
