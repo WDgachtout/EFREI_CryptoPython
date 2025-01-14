@@ -32,7 +32,7 @@ def svg():
     return render_template('svg.html')
 
 @app.route('/maison')
-def svg():
+def maison():
     return render_template('maison.html')
     
 @app.route('/encrypt/<string:valeur>')
