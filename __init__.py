@@ -49,7 +49,7 @@ def jeu():
 
 @app.route('/outiljava')
 def js():
-    return render_template('Outil_JS.html')
+    return render_template('Outils_JS.html')
     
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
