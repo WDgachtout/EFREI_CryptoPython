@@ -47,7 +47,7 @@ def chenille():
 def jeu():
     return render_template('Jeu_Des_Base.html')
 
-@app.route('/outiljs')
+@app.route('/outiljava')
 def js():
     return render_template('Outil_JS.html')
     
