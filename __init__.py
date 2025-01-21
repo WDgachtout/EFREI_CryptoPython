@@ -46,6 +46,10 @@ def chenille():
 @app.route('/jeudesbase')
 def jeu():
     return render_template('Jeu_Des_Base.html')
+
+@app.route('/Outil_JS.html')
+def jeu():
+    return render_template('Jeu_Des_Base.html')
     
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
