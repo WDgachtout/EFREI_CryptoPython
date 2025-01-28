@@ -24,12 +24,22 @@ function lancer() {
         return;
     }
 
+    // Réinitialiser toutes les chambres bleues à gris
+    for (let i = 1; i <= 6; i++) {
+        const chamber = document.getElementById("Br" + i);
+        if (chamber.getAttribute("fill") === "blue") {
+            chamber.setAttribute("fill", "gray");
+        }
+    }
+
+    // Générer une chambre aléatoire
     const randomChamber = Math.floor(Math.random() * 6) + 1;
     document.getElementById("Br" + randomChamber).setAttribute("fill", "blue");
 
+    // Vérifier si le joueur gagne ou perd
     if (selectedChambers.includes(randomChamber)) {
         alert("Perdu ! La balle bleue est tombée sur une chambre rouge.");
-        totalGains = 0; // Le joueur perd tout.
+        totalGains = 0; // Le joueur perd tout
     } else {
         let gain = 0;
         if (selectedChambers.length === 1) gain = 10000;
@@ -40,26 +50,24 @@ function lancer() {
         alert("Gagné ! Vous avez remporté " + gain.toLocaleString() + " €.\nTotal des gains : " + totalGains.toLocaleString() + " €.");
     }
 
-    resetGame();
+    // Mettre à jour l'affichage des gains
+    document.getElementById("totalGains").innerText = totalGains.toLocaleString();
+
+    // Réinitialiser la sélection des chambres rouges
+    resetSelectedChambers();
 }
 
-function resetGame() {
+function resetSelectedChambers() {
     selectedChambers.forEach(n => {
         document.getElementById("Br" + n).setAttribute("fill", "gray");
     });
     selectedChambers = [];
-    for (let i = 1; i <= 6; i++) {
-        const chamber = document.getElementById("Br" + i);
-        if (chamber.getAttribute("fill") === "blue") {
-            chamber.setAttribute("fill", "gray");
-        }
-    }
 }
 </script>
 </head>
 <body>
     <h1>Roulette Russe</h1>
-    <p>Total des gains : <span id="gains">0</span> €</p>
+    <p>Total des gains : <span id="totalGains">0</span> €</p>
 
     <svg width="200" height="200" style="background-color:antiquewhite">
         <circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none" />
