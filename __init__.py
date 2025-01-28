@@ -50,6 +50,11 @@ def jeu():
 @app.route('/outiljava')
 def js():
     return render_template('Outils_JS.html')
+
+@app.route('/rouletterusse')
+def roulette():
+    return render_template('Roulette_Russe_Etape_1_Barillet_Vide.html')
+
     
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
