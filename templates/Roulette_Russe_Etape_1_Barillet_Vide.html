@@ -9,21 +9,12 @@ function lancer() {
 
 function displayChamber(n) {
     if (selectedChamber) {
-        document.getElementById(selectedChamber).setAttribute("fill", originalColors[selectedChamber]);
+        document.getElementById(selectedChamber).setAttribute("fill", "gray");
     }
     selectedChamber = "Br" + n;
     document.getElementById(selectedChamber).setAttribute("fill", "red");
     alert("Chambre " + n);
 }
-
-const originalColors = {
-    Br1: "gray",
-    Br2: "blue",
-    Br3: "violet",
-    Br4: "orange",
-    Br5: "yellow",
-    Br6: "green",
-};
 </script>
 </head>
 <body>
@@ -32,11 +23,11 @@ const originalColors = {
     <svg width="200" height="200" style="background-color:antiquewhite">
         <circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none" />
         <circle id="Br1" cx="100" cy="40" r="25" stroke="black" stroke-width="3" fill="gray" onclick="displayChamber(1)" />
-        <circle id="Br2" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="blue" onclick="displayChamber(2)" />
-        <circle id="Br3" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="violet" onclick="displayChamber(3)" />
-        <circle id="Br4" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="orange" onclick="displayChamber(4)" />
-        <circle id="Br5" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="yellow" onclick="displayChamber(5)" />
-        <circle id="Br6" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="green" onclick="displayChamber(6)" />
+        <circle id="Br2" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="displayChamber(2)" />
+        <circle id="Br3" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="displayChamber(3)" />
+        <circle id="Br4" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="displayChamber(4)" />
+        <circle id="Br5" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="displayChamber(5)" />
+        <circle id="Br6" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="gray" onclick="displayChamber(6)" />
         <circle cx="100" cy="100" r="10" stroke="black" stroke-width="3" fill="black" />
     </svg>  
     
