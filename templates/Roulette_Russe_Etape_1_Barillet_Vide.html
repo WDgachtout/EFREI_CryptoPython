@@ -4,8 +4,12 @@
 let selectedChamber = null;
 
 function lancer() {
-    const randomNumber = Math.floor(Math.random() * 6) + 1; // Génère un nombre aléatoire entre 1 et 6
-    alert("Le barillet s'arrête sur la chambre " + randomNumber);
+    const randomNumber = Math.floor(Math.random() * 6) + 1;
+    if (document.getElementById("Br" + randomNumber).getAttribute("fill") === "red") {
+        alert("Perdu ! Le barillet s'est arrêté sur la chambre " + randomNumber + ", qui était sélectionnée.");
+    } else {
+        alert("Gagné ! Le barillet s'est arrêté sur la chambre " + randomNumber + ".");
+    }
 }
 
 function displayChamber(n) {
@@ -14,7 +18,7 @@ function displayChamber(n) {
     }
     selectedChamber = "Br" + n;
     document.getElementById(selectedChamber).setAttribute("fill", "red");
-    alert("Chambre " + n);
+    alert("Chambre " + n + " sélectionnée.");
 }
 </script>
 </head>
